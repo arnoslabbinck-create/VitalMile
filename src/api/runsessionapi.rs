@@ -15,7 +15,7 @@ pub async fn get_runsession_handler() -> impl IntoResponse {
 
 }
 
-pub async fn create_runsession_handler() -> impl IntoResponse {
+pub async fn post_create_runsession_handler() -> impl IntoResponse {
     const Message: &str = "Hello, world!";
     let json_response : serde_json::Value = serde_json::json!({ "message": Message });
     (StatusCode::OK, Json(json_response));
