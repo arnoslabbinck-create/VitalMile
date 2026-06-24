@@ -1,7 +1,7 @@
 use chrono::{DateTime, Utc, Local  };
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Default, sqlx::FromRow)]
+#[derive(Debug, Default, sqlx::FromRow, Deserialize)]
 pub struct TrainingMarker {
     pub id: String,
     pub date: DateTime<Utc>,
