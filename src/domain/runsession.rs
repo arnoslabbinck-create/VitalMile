@@ -1,8 +1,8 @@
 
 use chrono::{DateTime, Utc, Local};
+use serde::Deserialize;
 
-
-#[derive(Debug, Default, sqlx::FromRow)]
+#[derive(Debug, Default, sqlx::FromRow, Deserialize)]
 pub struct RunSession {
     pub id: String,
     pub date: DateTime<Utc>,

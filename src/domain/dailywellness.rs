@@ -1,9 +1,9 @@
 
 use sqlx::{postgres::PgRow, FromRow, QueryBuilder, Row};
 use chrono::{DateTime, Local};
+use serde::Deserialize;
 
-
-#[derive(Debug, Default, sqlx::FromRow)]
+#[derive(Debug, Default, sqlx::FromRow, Deserialize)]
 pub struct DailyWellness {
     pub id: String,
     pub sleep_hours: f64,
