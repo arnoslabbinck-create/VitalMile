@@ -1,5 +1,5 @@
 use chrono::{DateTime, Local};
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize};
 
 
 #[derive(Debug, Default, sqlx::FromRow, Deserialize)]
